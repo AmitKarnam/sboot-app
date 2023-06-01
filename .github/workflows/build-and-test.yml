@@ -5,7 +5,7 @@ on:
     branches: [ "main", "rel-*" ]
 
 env:
-  NAME: Amit Karnam
+  NAME: Amit 
 
 jobs:
 
