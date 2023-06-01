@@ -1,0 +1,43 @@
+name: Build & Test 2
+
+on:
+  push:
+    branches: [ "main", "rel-*" ]
+
+env:
+  NAME: World
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-20.04
+
+    timeout-minutes: 5
+
+    steps:
+
+      - name: Greet user
+        run: echo "Hello $NAME"
+
+      - name: Another step
+        run: echo "This is another step in the same job"
+
+  test:
+
+    runs-on: ubuntu-22.04
+
+    timeout-minutes: 10
+
+    env:
+      NAME: Planet
+
+    steps:
+
+      - name: Step inside test job
+        run: echo "Hello $NAME"
+
+      - name: Another step
+        run: echo "This is another step in the same job"
+
+
