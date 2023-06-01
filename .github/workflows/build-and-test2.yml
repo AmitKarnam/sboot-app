@@ -32,6 +32,8 @@ jobs:
     env:
       NAME: Planet
 
+    needs: build
+
     steps:
 
       - name: Step inside test job
